@@ -45,4 +45,11 @@
 		});
 	});
 
+
+    
+
+
+	jQuery('.accordion-section-title').eq(0).after('<a style="position: relative;padding: 5px 44px;bottom: 0px;background: #e74c3c;color: #ffffff;text-decoration: none;font-size: 14px;line-height: 30px;width: 100%;font-weight: 700;letter-spacing: 2px;" href="https://themeforest.net/item/videostories-responsive-video-wordpress-theme-for-marketers/20828897?ref=jewel_theme" target="_blank">Upgrade to PRO Version</a>');
+	// jQuery('.accordion-section-title').eq(0).css('padding-bottom','35px');
+	
 } )( jQuery );

@@ -121,3 +121,14 @@ function videostories_customize_preview_js() {
 
 add_action( 'customize_preview_init', 'videostories_customize_preview_js' );
 
+
+
+
+/**
+ * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
+ */
+
+function videstories_custom_customize_enqueue() {
+    wp_enqueue_script( 'videostories-custom-customize', get_template_directory_uri() . '/js/customizer.js', array( 'jquery', 'customize-controls' ), false, true );
+}
+add_action( 'customize_controls_enqueue_scripts', 'videstories_custom_customize_enqueue' );

@@ -156,6 +156,7 @@ function videostories_blog_entry_meta(){ ?>
 		<?php echo '<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>';?>
 		<span><i class="fa fa-clock-o"></i> <time datetime="PT5M"><?php echo esc_html( human_time_diff( get_the_time('U'), current_time('timestamp') )) ; ?></time></span>
 		<span><a href="<?php comments_link(); ?>"><i class="fa fa-comment-o"></i> <span class="count"><?php comments_number( '0', '1', '%' );?></span></a></span>
+		<span><?php the_tags();?></span>
 	</div><!-- /.entry-meta -->
 <?php }
 

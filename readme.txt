@@ -55,7 +55,7 @@ Our Support: http://prowptheme.com/support/
 
 - Screenshot images
 https://www.flickr.com/photos/jemeeroy/42893193034/
-https://www.pexels.com/photo/actress-adult-attractive-audience-276046/
+https://pixabay.com/en/charlize-theron-entertainer-actress-79562/
 https://www.pexels.com/photo/audience-back-view-band-blur-442540/
 https://www.pexels.com/photo/man-watching-concert-246972/
 https://www.pexels.com/photo/animation-cartoon-cartoon-character-disney-42415/

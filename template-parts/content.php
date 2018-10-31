@@ -34,22 +34,6 @@
 
 		<?php videostories_read_more();?>
 
-		<?php if ( get_edit_post_link() ) : ?>
-			<footer class="entry-footer">
-				<?php
-				the_tags();
-				edit_post_link(
-					sprintf(
-						/* translators: %s: Name of current post */
-						esc_html__( 'Edit %s', 'videostories' ),
-						the_title( '<span class="screen-reader-text">"', '"</span>', false )
-					),
-					'<span class="edit-link">',
-					'</span>'
-				);
-				?>
-			</footer><!-- .entry-footer -->
-		<?php endif; ?>
 
 	</div><!-- /.entry-content -->
 </article><!-- /.post -->

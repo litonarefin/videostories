@@ -28,3 +28,31 @@ function videostories_body_classes( $classes ) {
 }
 add_filter( 'body_class', 'videostories_body_classes' );
 
+
+
+
+
+/* Display a notice that can be dismissed */
+
+add_action('admin_notices', 'videostories_theme_admin_notice');
+
+function videostories_theme_admin_notice() {
+    global $current_user ;
+        $user_id = $current_user->ID;
+    if ( ! get_user_meta($user_id, 'videostories_ignore_notice') ) {
+        echo '<div class="updated"><p>';         
+        printf(__('<h4 style="font-size: 20px; color: #5FA52A; font-weight: normal; margin-bottom: 10px; margin-top: 5px;"><a href="https://themeforest.net/item/videostories-responsive-video-wordpress-theme-for-marketers/20828897?ref=jewel_theme" target="_blank">' . __('Get VideoStories PRO Today!', 'videostories') . '</a></h4>Check out Premium Features of <a href="https://themeforest.net/item/videostories-responsive-video-wordpress-theme-for-marketers/20828897?ref=jewel_theme" target="_blank">' . __('VideoStories PRO', 'videostories') . '</a> Theme. Compare Why this Theme is really Awesome !!! <br>
+             <a style="float: right;" href="%1$s">X</a>'), '?videostories_ignore=0');
+        echo "</p></div>";
+    }
+}
+add_action('admin_init', 'videostories_theme_ignore');
+
+
+function videostories_theme_ignore() {
+    global $current_user;
+        $user_id = $current_user->ID;
+        if ( isset($_GET['videostories_ignore']) && '0' == $_GET['videostories_ignore'] ) {
+             add_user_meta($user_id, 'videostories_ignore_notice', 'true', true);
+    }
+}
